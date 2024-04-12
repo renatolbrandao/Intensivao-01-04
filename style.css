@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --bg-astronaut-page: #F9F4FB;
+    --bg-color-planet: #312D64;
+    --bg-color-group-wrapper: #fff;
+    --bg-contact-page: #F9F4FB;
+
+    --border-dropdown-color: #B52184;
+
+    --font-planet-title: #B52184;
+    --font-planet-subtitle: #312D64;
+    --font-contact-placeholder: #312D64;
+    --font-footer-text: #fff;
+}
+
+html, body, input, textarea, button, footer{
+    font-family: 'Mulish';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 43rem;
+}
+
+.main{
+    background-color: var(--bg-astronaut-page);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main h1, #textbox h2, .contact h1{
+    color:var(--font-planet-title)
+}
+
+.main p, #textbox p{
+    color: var(--font-planet-subtitle)
+}
+
+.main h1{
+    margin-top: 1.7rem;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+.main p{
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#dropdown{
+    width: 5.85rem;
+    height: 10.5rem;
+    
+    border-radius: 76.1rem;
+    border: 4px solid #B52184;
+    color: var(--border-dropdown-color);
+    
+    font-size: 3rem;
+    font-weight: 900;
+    
+    text-align: center;
+    padding: 3rem 1.4rem 2.9rem;
+    margin-bottom: 9.3rem;
+}
+
+
+.planet-group{
+    background-color: var(--bg-color-planet);
+    display: flex;
+    flex-direction: column;
+    gap: 4.9rem;
+    padding-top: 5.3rem;
+    padding-bottom: 5.2rem;
+}
+
+.group-wrapper{
+    width: 35.2rem;
+    height: 35.7rem;
+    border-radius: 1.9rem;
+    background-color: var(--bg-color-group-wrapper);
+    margin-left: 3.9rem;
+    padding: 2.6rem;
+
+}
+
+.group-wrapper img{
+    margin-bottom: 3rem;
+}
+
+#textbox{
+    text-align: left;
+}
+
+#textbox h2{
+    font-size: 2.9rem;
+    font-weight:900;
+    margin-bottom: 2rem;
+}
+#textbox p{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.contact{
+    background-color: var(--bg-contact-page);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    
+    padding-top: 7.8rem;
+    padding-left: 4rem;
+
+}
+
+.contact h1{
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+.contact #input-name, .contact #input-email{
+    width: 34.8rem;
+    height: 4.8rem;
+    
+    border-radius: 1.6rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--font-contact-placeholder);
+
+    padding: 1.4rem 1.2rem 1.6rem;
+}
+
+.contact #input-text-message{
+    width: 34.8rem;
+    height: 12.6rem;
+    
+    border-radius: 1.6rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--font-contact-placeholder);
+
+    padding: 1.6rem 1.2rem;
+}
+
+.contact::placeholder{
+
+    color: var(--font-contact-placeholder);
+}
+
+.contact button{
+    width: 15.1rem;
+    height: 4.5rem;
+    
+    border:none;
+    border-radius: 1.6rem;
+
+    background: linear-gradient(45deg, #343193 0%, #302C63 100%) no-repeat;
+    color: var(--bg-color-group-wrapper);
+    
+    margin-bottom: 6.5rem;
+}
+
+footer{
+    background-color: var(--bg-color-planet);
+    color: var(--font-footer-text);
+    
+    height: 7.8rem;
+    text-align: center;
+    align-content: center;
+
+    font-size: 1.98rem;
+    font-weight:500;
+}
+
+@media (min-width: 1120px){
+    :root{
+        font-size: 62.5%;
+    }
+    
+    body{
+        max-width: 144.4rem;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .planet-group{
+        background-color: var(--bg-color-planet);
+        display: flex;
+        flex-direction: row;
+        gap: 4.9rem;
+        padding-top: 5.3rem;
+    }
+}
