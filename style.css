@@ -28,14 +28,27 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    min-width: 43rem;
+    /* min-width: 43rem; */
 }
 
 .main{
+    background-image: url(./assets/astronautaMobile.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    
     background-color: var(--bg-astronaut-page);
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    min-width: 43rem;
+    height: 67.9rem;
+
+}
+
+.textbox{
+    padding-top: 38.7rem;
+    padding-left: 5.3rem;  
 }
 
 .main h1, #textbox h2, .contact h1{
@@ -68,10 +81,13 @@ body{
     
     font-size: 3rem;
     font-weight: 900;
-    
-    text-align: center;
-    padding: 3rem 1.4rem 2.9rem;
+        
     margin-bottom: 9.3rem;
+    margin-left: 12.3rem;
+}
+
+#dropdown img{
+    padding: 2.2rem 1rem 2.8rem 0.9rem;
 }
 
 
@@ -129,6 +145,14 @@ body{
     font-weight: 900;
 }
 
+.contact #input-name{
+    background: url(./assets/pessoaMobile.png) no-repeat scroll 1.4rem 1.2rem;
+}
+
+.contact #input-email{
+    background: url(./assets/arrobaMobile.png) no-repeat scroll 1.4rem 1.2rem;
+}
+
 .contact #input-name, .contact #input-email{
     width: 34.8rem;
     height: 4.8rem;
@@ -140,6 +164,10 @@ body{
     color: var(--font-contact-placeholder);
 
     padding: 1.4rem 1.2rem 1.6rem;
+}
+
+.contact #input-name::placeholder, .contact #input-email::placeholder{
+    padding-left: 4rem;
 }
 
 .contact #input-text-message{
@@ -156,8 +184,11 @@ body{
 }
 
 .contact::placeholder{
-
     color: var(--font-contact-placeholder);
+}
+
+.contact textarea{
+    background-color: var(--bg-contact-page);
 }
 
 .contact button{
@@ -173,6 +204,7 @@ body{
     margin-bottom: 6.5rem;
 }
 
+
 footer{
     background-color: var(--bg-color-planet);
     color: var(--font-footer-text);
@@ -185,7 +217,7 @@ footer{
     font-weight:500;
 }
 
-@media (min-width: 1120px){
+@media (min-width: 1440px){
     :root{
         font-size: 62.5%;
     }
@@ -199,11 +231,48 @@ footer{
         margin: 0 auto;
     }
 
+    .main{
+        background-image: url(./assets/astronautaWeb.png);
+        background-position-x: 69.1rem;
+        height: 83.6rem;
+        margin-bottom: 0;
+    }
+
+    .main .textbox{
+        padding: 0;
+        margin: 31.2rem 10rem ;
+    }
+    .textbox h1{
+        font-size: 5.8rem;
+    }
+    .textbox p{
+        font-size: 3.2rem;
+    }
+
+    #dropdown{
+        margin-left: 1.9rem;
+        margin-top: 21rem;
+        margin-bottom: 0;
+    }
+
     .planet-group{
         background-color: var(--bg-color-planet);
         display: flex;
         flex-direction: row;
         gap: 4.9rem;
         padding-top: 5.3rem;
+    }
+
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        background: url(./assets/estrelas-web.png) no-repeat;
+        background-position: right;
+        
+        background-color: var(--bg-contact-page);
+    }
+
+    footer{
+        padding: 1.6rem;
     }
 }
